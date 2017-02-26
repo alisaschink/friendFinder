@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Reservation Page</title>
+  <title>Survey Page</title>
 
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -15,15 +15,11 @@
   <div class="container">
 
     <div class="jumbotron">
-      <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> Hot Restaurant</h1>
+      <h1 class="text-center"><span class="glyphicon glyphicon-pencil"></span> Survey Questions</h1>
       <hr>
-      <h2 class="text-center">Make your reservation</h2>
+      <h2 class="text-center">Answer each question on a scale of 1-5</h2>
       <br>
 
-      <div class="text-center">
-        <a href="/tables"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
-        <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
-      </div>
     </div>
 
     <div class="row">
@@ -32,31 +28,151 @@
         <!-- Reservation Page -->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title">Table Reservation</h4>
+            <h4 class="panel-title">About You</h4>
           </div>
           <div class="panel-body">
 
             <form role="form">
 
               <div class="form-group">
-                <label for="reserve-name">Name</label>
-                <input type="text" class="form-control" id="reserve-name">
+                <label for="user-name">Name (Required)</label>
+                <input type="text" class="form-control" id="user-name" required>
               </div>
 
               <div class="form-group">
-                <label for="reserve-phone">Phone Number</label>
-                <input type="text" class="form-control" id="reserve-phone">
+                <label for="photo">Link to Photo Image (Required) </label>
+                <input type="text" class="form-control" id="photo" required>
               </div>
 
-              <div class="form-group">
-                <label for="reserve-email">Email</label>
-                <input type="text" class="form-control" id="reserve-email">
-              </div>
+              <h4>Question 1</h4>
+              <select data-placeholder class="chosen-select" id="q1">
+                <option value>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+                
+              </select>
+              <br>
+              <br>
 
-              <div class="form-group">
-                <label for="reserve-unique-id">Unique ID</label>
-                <input type="text" class="form-control" id="reserve-unique-id">
-              </div>
+              <h4>Question 2</h4>
+              <select data-placeholder class="chosen-select" id="q2">
+                <option value>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+                
+              </select>
+              <br>
+              <br>
+
+              <h4>Question 3</h4>
+              <select data-placeholder class="chosen-select" id="q3">
+                <option value>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+                
+              </select>
+              <br>
+              <br>
+
+              <h4>Question 4</h4>
+              <select data-placeholder class="chosen-select" id="q4">
+                <option value>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+                
+              </select>
+              <br>
+              <br>
+
+              <h4>Question 5</h4>
+              <select data-placeholder class="chosen-select" id="q5">
+                <option value>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+                
+              </select>
+              <br>
+              <br>
+
+              <h4>Question 6</h4>
+              <select data-placeholder class="chosen-select" id="q6">
+                <option value>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+                
+              </select>
+              <br>
+              <br>
+
+              <h4>Question 7</h4>
+              <select data-placeholder class="chosen-select" id="q7">
+                <option value>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+                
+              </select>
+              <br>
+              <br>
+
+              <h4>Question 8</h4>
+              <select data-placeholder class="chosen-select" id="q8">
+                <option value>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+                
+              </select>
+              <br>
+              <br>
+
+              <h4>Question 9</h4>
+              <select data-placeholder class="chosen-select" id="q9">
+                <option value>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+                
+              </select>
+              <br>
+              <br>
+
+              <h4>Question 10</h4>
+              <select data-placeholder class="chosen-select" id="q10">
+                <option value>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+                
+              </select>
+              <br>
+              <br>
 
               <button type="submit" class="btn btn-primary submit">Submit</button>
             </form>
@@ -70,9 +186,10 @@
 
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a> | <a href="https://github.com/afhaque/HotRestaurant">GitHub Repo</a></p>
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/alisaschink/friendFinder">GitHub Repo</a></p>
       </div>
     </footer>
+  
 
   </div>
 
