@@ -1,18 +1,8 @@
-// ===============================================================================
-// DATA
-// Below data will hold all of the reserved tables.
-// Initially we just set it equal to a "dummy" customer.
-// But you could have it be an empty array as well.
-// ===============================================================================
+// holds friends survey data
 
-var tableArray = [
-  {
-    customerName: "Ahmed",
-    customerEmail: "ahmed@example.com",
-    customerID: "afhaque89",
-    phoneNumber: "000-000-0000"
-  }
+var friendsData = [
+
 ];
 
-// Note how we export the array. This makes it accessible to other files using require.
-module.exports = tableArray;
+// exports array of friends objects.
+module.exports = friendsData;
