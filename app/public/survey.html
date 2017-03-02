@@ -203,6 +203,26 @@
       </div>
     </div>
 
+<!--Modal-->
+<div class="modal fade" id="matchModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Best Match</h4>
+      </div>
+      <div class="modal-body">
+        <h2 id="matchName">
+        <img id="matchPhoto">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <!-- footer -->
     <footer class="footer">
       <div class="container">
@@ -221,6 +241,17 @@
     $(".submit").on("click", function(event) {
       event.preventDefault();
 
+      // form validation
+      function validateForm(){
+        var validated = true;
+        $(".form-control").each(function(){
+          if ( $(this).val() === " ")
+            validated = false;
+        });
+        return validated
+      }
+
+      if (validateForm() == true){
       var scoresArray = [];
       // grabs form elements
       var newFriend = {
@@ -233,24 +264,30 @@
       // pushes values of selected options and pushes them to scoresArray
       $(".chosen-select").each(function() {
         var value = $(this).val();
-        var num = parseInt(value);
-        scoresArray.push(num);
+        scoresArray.push(value);
       });
       
       console.log(newFriend);
     
 
       // posts new friend data to api/friends
-      $.post("/api/friends", newFriend,
-        function(data) {
-          if (data) {
-            alert("Your survey has been submitted!");
-          }
+      $.post("/api/friends", newFriend, function(data) {
+        console.log(data);
+        // sets name and photo of best match to matchModal
+        $("#matchName").text(data.name);
+        $("#matchPhoto").attr("src", data.photo);
+
+         $("#matchModal").modal('toggle');
+      
           
           // clear the form when submitting
           $("#user-name").val("");
           $("#photo").val("");
           $(".chosen-select").val("");
         });
-    });
+  } else {
+    alert("please fill out all fields before submitting!")
+  }
+  return false;
+});
 </script>

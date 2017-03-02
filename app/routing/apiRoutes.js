@@ -28,7 +28,7 @@ module.exports = function(app) {
       }
 
       // selects user with closest matching scores
-      var lowestScore = 40;
+      var lowestScore = 40; // maximum difference
       for(i=0; i<diffScores.length; i++){
         if(diffScores[i] < lowestScore){
           lowestScore = diffScores[i];
@@ -37,6 +37,11 @@ module.exports = function(app) {
       var lowestScoreIndex = diffScores.indexOf(lowestScore);
       var bestMatchName = friendsData[lowestScoreIndex].name;
       var bestMatchPhoto = friendsData[lowestScoreIndex].photo;
-      console.log(bestMatchName);
+      var bestMatch = {
+        name: bestMatchName,
+        photo: bestMatchPhoto
+      }
+
+      res.json(bestMatch);
   });
 };
