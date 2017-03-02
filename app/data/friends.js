@@ -2,7 +2,7 @@
 
 var friendsData = [
   {
-    name: "Freddy",
+    name: "Freddy Krueger",
     photo: "https://s-media-cache-ak0.pinimg.com/736x/a5/22/5c/a5225c0b1213f21a245ea918e089620d.jpg",
     scores: [
       "5",
@@ -18,7 +18,7 @@ var friendsData = [
     ]
   },
   {
-    name: "Jason",
+    name: "Jason Voorhees",
     photo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Jasonf.jpg/250px-Jasonf.jpg",
     scores: [
       "2",
@@ -34,7 +34,7 @@ var friendsData = [
     ]
   },
   {
-    name: "Michael",
+    name: "Michael Myers",
     photo: "http://www.lovethispic.com/uploaded_images/38159-Michael-Myers-.jpg",
     scores: [
       "4",
